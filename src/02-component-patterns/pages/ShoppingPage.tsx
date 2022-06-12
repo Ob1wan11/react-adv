@@ -1,5 +1,6 @@
 import React from "react";
 import { ProductButtons, ProductCard, ProductImage, ProductTitle } from "../components";
+import '../styles/custom-styles.css'
 
 
 const product = {
@@ -20,19 +21,35 @@ export const ShoppingPage = () => {
           flexWrap: "wrap",
         }}
       >
-         <ProductCard  product={product}>
-          <ProductCard.Image/> 
-          <ProductCard.Title /> 
-          <ProductCard.Buttons  />        
+         <ProductCard  
+         product={product}
+         className="bg-dark text-white"
+         >
+          <ProductCard.Image className="custom-image"/> 
+          <ProductCard.Title  className="text-white"/> 
+          <ProductCard.Buttons className="custom-buttons" />        
 
         </ProductCard> 
 
-        <ProductCard  product={product}>
-          <ProductImage/> 
-          <ProductTitle title="Cafe 3"/> 
-          <ProductButtons />        
+        <ProductCard  
+        product={product}
+        className="bg-dark text-white"
+        >
+          <ProductImage className="custom-image"/> 
+          <ProductTitle className="text-white"/> 
+          <ProductButtons className="custom-buttons"  />        
+         </ProductCard>
 
-        </ProductCard>
+         <ProductCard  
+        product={product}
+        style={{
+          backgroundColor:'#70D1F8'
+        }}
+        >
+          <ProductImage /> 
+          <ProductTitle /> 
+          <ProductButtons   />        
+         </ProductCard>
        
       </div>
     </div>
